@@ -32,7 +32,7 @@ $app->get('/modifier.phtml', function (Request $request, Response $response, arr
     return $this->renderer->render($response, 'modifier.phtml', ["article"=>$article]);
 });
 
-//modifier dans la base de donnees
+//modifier dans la base de donnee
 
 $app->post('/modifier', function (Request $request, Response $response, array $args) {
 
@@ -44,7 +44,7 @@ $app->post('/modifier', function (Request $request, Response $response, array $a
  
 
   $this->db;
-// modifier les donnes d'un id
+// modifier les donnees d'un id
    $article = articles::find($id);
    $article->nom=$nom;
    $article->type=$type;
