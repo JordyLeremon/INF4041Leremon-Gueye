@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>BOUTIQUE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="bootstrap/css/style.css"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <nav class="navbar navbar-default">
+                <div class=" default-container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                       
+                      <h2><span class="navbar-brand" style="font-weight: bold;font-size: 50px;height:40px;color : white; margin-right:5px;" >BOUTIQUE</span><img src="images/t1.jpg" title="logo" width="75px" height="75px"/></h2>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                     
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                            <a href="ajout.phtml"><img src="images/b1.jpg" title="ADD" width="50px" height="50px" class=" "/></a>
+                            </li>
+
+                              </ul>
+                       
+                    </div><!-- /.navbar-collapse -->
+                        
+                </div><!-- /.container-fluid -->
+            </nav>
+            
+        </div>
+    
+        <div id="content">
+            <div id="slider">
+                
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner default-container" role="listbox">
+                        <div class="item active">
+
+<meta charset="utf-8" />
+        <title> le tableau des articles</title>
+    </head>
+
+    <body>
+          <legend> Liste des articles</legend>
+   <table class="tab" border="2px" >
+            
+            <tr>
+                 <tr>
+                     
+                     <th style="width:70px">NOM</th>
+                     <th style="width:70px">COULEUR</th>
+                     <th style="width:70px">TYPE</th>
+                     <th style="width:70px">MARQUE</th>
+                     <th style="width:200px">ACTION </th>
+                 </tr> 
+                
+        <?php foreach ($article as $article):?> 
+               
+               <td style="width:70px">  <?php echo $article->nom;?> </td>
+               <td style="width:70px">  <?php echo $article->couleur;?> </td>
+               <td style="width:70px">  <?php echo $article->type;?> </td>
+               <td style="width:70px">  <?php echo $article->marque;?> </td>
+               
+                
+        
+        <!-- j'ai creé un lien modifier qui recupere la variable -->
+
+       <td style="width:50px;">  
+        <a href ='modifier.phtml?id=<?php echo $article->id;?>'><img src="images/modifier.jpg" title="modifier" width="25%" height="25%" /> </a> 
+        <a href ='delete.phtml?id=<?php echo $article->id;?>'><img src="images/delete2.png" title="supprimer" width="20%" height="20%" /> </a> 
+                         
+               </td>
+            </tr>
+        <?php endforeach;?>
+
+
+    </table>
+   
+
+   
+
+                        </div>
+                       
+                       
+                    </div>
+
+                    <!-- Controls -->
+                    
+            
+            </div>
+            <div id="services">
+                <div class="default-container">
+                               </div>
+        </div>
+        <div id="footer" >
+            <div class="default-container" style="padding-top: 60px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>A propos</h4>
+                        <p>
+                        <ul>
+                            <li>Conditions Générales</li>
+                         
+                        </ul>  
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Retrouvez nous sur</h4>
+                        <p>
+                        <ul>
+                            <li>twitter</li>
+                            <li>Facebook</li>
+                            <li>youtube</li>
+                        </ul>  
+                        </p>
+                    </div>                   
+                    
+                </div>
+            </div>
+            <div id="copyright">
+              <div class="default-container">
+                     ***************  Copyright: 2017***************<br> 
+                Webddisegn * by sdg * 
+        
+       
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

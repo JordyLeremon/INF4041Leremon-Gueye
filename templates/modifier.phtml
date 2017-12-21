@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>BOUTIQUE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="bootstrap/css/style.css"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <nav class="navbar navbar-default">
+                <div class=" default-container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                       
+                      <h2><span class="navbar-brand" style="font-weight: bold;font-size: 50px;height:40px;color : white; margin-right:5px;" > BOUTIQUE</span><img src="images/t1.jpg" title="logo" width="75px" height="75px"/></h2>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                     
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                            <a href="ajout.phtml"><img src="images/b1.jpg" title="ADD" width="50px" height="50px" class=" "/></a>
+                            </li>
+                              
+
+                              <li>
+                               <a href="AfficherTout.phtml"><img src="images/b4.jpg" title="show all" width="50px" height="50px" /></a>
+                              </li>
+
+                              </ul>
+                       
+                    </div><!-- /.navbar-collapse -->
+                        
+                </div><!-- /.container-fluid -->
+            </nav>
+            
+        </div>
+    
+        <div id="content">
+            <div id="slider">
+                
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner default-container" role="listbox">
+                        <div class="item active">
+                            <fieldset>
+
+        <legend>Modifier articles </legend>
+        
+        <form action="modifier" id ="fotrmu" method="post">
+
+  <div class="form-group row">
+    
+    <div class="col-sm-4">
+      <input type="hidden" class="form-control" id="inputid"  name="id" required="" value="<?php echo $article->id;?>">
+    </div>
+  </div>
+          <div class="form-group row">
+    <label for="inputnom" class="col-sm-2 col-form-label">NOM</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputnom" placeholder="nom" name="nom" required="" value="<?php echo $article->nom;?>">
+    </div>
+  </div>
+     <div class="form-group row">
+    <label for="inputcouleur" class="col-sm-2 col-form-label">COULEUR</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputcouleur" placeholder="couleur" name="couleur" required="" value="<?php echo $article->couleur;?>">
+    </div>
+  </div>
+     <div class="form-group row">
+    <label for="inputmarque" class="col-sm-2 col-form-label">MARQUE</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputmarque" placeholder="marque" name="marque" required="" value="<?php echo $article->marque;?>">
+    </div>
+  </div>
+     <div>
+          <div class="form-group row">
+    
+      <label for="inputype" class="col-sm-2 col-form-label">TYPE</label>
+      <div class="col-sm-4">
+      <select name="type" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+        <option value="bijoux" selected="">bijoux</option>
+        <option value="vetements">vetements</option>
+        <option value="chaussures">chaussures</option>
+      </select>
+
+ </div>
+    </div>
+     
+     
+
+       
+          <!-- <input type="submit" name='br' value="Ajouter"/> -->
+<div class="radia">
+<center><button  name='br' value="valider" class="btn btn-primary" type="submit">Modifier </button>
+    </center>
+</div>
+        </form> 
+
+     </fieldset>
+<p>
+   
+
+   <fieldset>
+     
+            <ul>
+                <li><a href="AfficherTout.phtml">liste des atricles ajouter</a></li>
+             
+            </ul>
+   </fieldset>
+
+</p>
+
+                        </div>
+                       
+                       
+                    </div>
+
+                    <!-- Controls je peux ajouter -->
+                    
+            
+            </div>
+            <div id="services">
+                <div class="default-container">
+                               </div>
+        </div>
+        <div id="footer" >
+            <div class="default-container" style="padding-top: 60px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>A propos</h4>
+                        <p>
+                        <ul>
+                            <li>Conditions Générales</li>
+                         
+                        </ul>  
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Retrouvez nous sur</h4>
+                        <p>
+                        <ul>
+                            <li>twitter</li>
+                            <li>Facebook</li>
+                            <li>youtube</li>
+                        </ul>  
+                        </p>
+                    </div>                   
+                    
+                </div>
+            </div>
+            <div id="copyright">
+              <div class="default-container">
+                     ***************  Copyright: 2017***************<br> 
+                Webddisegn * by sdg* 
+        
+       
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
